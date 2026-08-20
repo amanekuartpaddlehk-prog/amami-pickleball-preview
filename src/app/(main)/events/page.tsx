@@ -4,7 +4,7 @@ export default function EventsPage() {
       <section className="page-hero">
         <p className="page-hero-label">Events</p>
         <h1>イベント・大会</h1>
-        <p>奄美ピックルボール協会が主催・参加するイベント情報</p>
+        <p>あまねくアートパドル協会が主催・参加するイベント情報</p>
       </section>
       <section className="section bg-surface">
         <div className="container">

@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: '奄美ピックルボール協会',
-  description: '一般社団法人アチーブエイト / 奄美ピックルボール協会の公式サイト',
+  title: 'あまねくアートパドル協会',
+  description: '一般社団法人アチーブエイト / あまねくアートパドル協会の公式サイト',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

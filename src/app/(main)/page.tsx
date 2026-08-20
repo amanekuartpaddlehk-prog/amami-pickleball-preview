@@ -8,10 +8,10 @@ export default function HomePage() {
           <img src="/assets/images/hero.jpg" alt="" aria-hidden="true" loading="eager" />
         </div>
         <div className="hero-content">
-          <span className="hero-label">Amami Pickleball Association</span>
-          <h1 className="hero-title en-heading">AMAMI PICKLEBALL</h1>
-          <p className="hero-title-ja">奄美から、スポーツで繋がる。</p>
-          <p className="hero-desc">ピックルボールは年齢・体力に関わらず誰でも楽しめるスポーツです。奄美大島でいっしょに始めませんか。</p>
+          <span className="hero-label">Art Paddle Association</span>
+          <h1 className="hero-title en-heading">ART PADDLE</h1>
+          <p className="hero-title-ja">アートとスポーツで、島から世界へ。</p>
+          <p className="hero-desc">アートパドルは年齢・体力に関わらず誰でも楽しめるスポーツです。奄美大島でいっしょに始めませんか。</p>
           <div className="hero-cta">
             <a href="/contact/" className="btn btn-accent">お問い合わせ・参加する &rarr;</a>
           </div>
@@ -26,8 +26,8 @@ export default function HomePage() {
       <section className="section bg-bg">
         <div className="container">
           <div className="section-header animate-on-scroll">
-            <span className="section-label">About Pickleball</span>
-            <h2 className="section-title">奄美で広がる、新しいスポーツ</h2>
+            <span className="section-label">About Art Paddle</span>
+            <h2 className="section-title">奄美で広がる、アートパドル</h2>
           </div>
           <div className="intro-grid">
             <div className="intro-card card-hover animate-on-scroll">
@@ -43,7 +43,7 @@ export default function HomePage() {
               <h3>島の人が繋がる場所</h3>
               <p>奄美大島を拠点に、地域の人々が集まるコミュニティを育てています。</p>
               <div className="intro-card-image" style={{ marginTop: '20px' }}>
-                <img src="/assets/images/intro-2.jpg" alt="奄美ピックルボールコミュニティ" loading="lazy" />
+                <img src="/assets/images/intro-2.jpg" alt="あまねくアートパドルコミュニティ" loading="lazy" />
               </div>
             </div>
             <div className="intro-card card-hover animate-on-scroll">
@@ -56,7 +56,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="view-all-wrap animate-on-scroll">
-            <a href="/about-pickleball/" className="btn btn-outline-primary">ピックルボールについて詳しく &rarr;</a>
+            <a href="/about-pickleball/" className="btn btn-outline-primary">アートパドルについて詳しく &rarr;</a>
           </div>
         </div>
       </section>
@@ -104,7 +104,7 @@ export default function HomePage() {
       <section className="cta-section">
         <div className="container">
           <p className="cta-section-label">Join Us</p>
-          <h2>一緒にピックルボールを始めませんか</h2>
+          <h2>一緒にアートパドルを始めませんか</h2>
           <p>まずはお気軽にお問い合わせください。体験会の日程もご案内します。</p>
           <div className="cta-buttons">
             <a href="/contact/" className="btn btn-accent">お問い合わせ・参加する</a>

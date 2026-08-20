@@ -4,21 +4,21 @@ export default function AboutPage() {
       <section className="page-hero">
         <p className="page-hero-label">About Us</p>
         <h1>協会について</h1>
-        <p>一般社団法人アチーブエイト / 奄美ピックルボール協会のご紹介。</p>
+        <p>一般社団法人アチーブエイト / あまねくアートパドル協会のご紹介。</p>
       </section>
 
       <section className="section bg-bg">
         <div className="container" style={{ maxWidth: '900px' }}>
           <div className="mission-block animate-on-scroll">
             <blockquote style={{ fontSize: 'clamp(1.5rem,3vw,2.5rem)' }}>「奄美から、スポーツで繋がる。」</blockquote>
-            <p>奄美大島を拠点に、ピックルボールを通じた地域コミュニティの活性化と、スポーツの普及に取り組んでいます。初心者から上級者まで、島の皆さんが笑顔でスポーツを楽しめる環境づくりを目指しています。</p>
+            <p>奄美大島を拠点に、アートパドルを通じた地域コミュニティの活性化と、スポーツの普及に取り組んでいます。初心者から上級者まで、島の皆さんが笑顔でスポーツを楽しめる環境づくりを目指しています。</p>
           </div>
         </div>
       </section>
 
       <section className="bg-surface" style={{ paddingBlock: 0 }}>
         <div style={{ maxWidth: 'var(--container-max)', marginInline: 'auto' }}>
-          <img src="/assets/images/about-us.jpg" alt="奄美ピックルボール協会の活動風景" loading="lazy" style={{ width: '100%', maxHeight: '480px', objectFit: 'cover', display: 'block' }} />
+          <img src="/assets/images/about-us.jpg" alt="あまねくアートパドル協会の活動風景" loading="lazy" style={{ width: '100%', maxHeight: '480px', objectFit: 'cover', display: 'block' }} />
         </div>
       </section>
 
@@ -33,7 +33,7 @@ export default function AboutPage() {
               <tbody>
                 <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
                   <th style={{ padding: '16px 20px 16px 0', width: '30%', color: 'var(--color-muted)', fontWeight: 500, textAlign: 'left', whiteSpace: 'nowrap' }}>団体名</th>
-                  <td style={{ padding: '16px 0' }}>一般社団法人アチーブエイト<br />奄美ピックルボール協会</td>
+                  <td style={{ padding: '16px 0' }}>一般社団法人アチーブエイト<br />あまねくアートパドル協会</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid var(--color-border)' }}>
                   <th style={{ padding: '16px 20px 16px 0', color: 'var(--color-muted)', fontWeight: 500, textAlign: 'left' }}>所在地</th>
@@ -41,7 +41,7 @@ export default function AboutPage() {
                 </tr>
                 <tr>
                   <th style={{ padding: '16px 20px 16px 0', color: 'var(--color-muted)', fontWeight: 500, textAlign: 'left' }}>目的</th>
-                  <td style={{ padding: '16px 0' }}>奄美大島におけるピックルボールの普及・競技者育成・地域コミュニティの形成</td>
+                  <td style={{ padding: '16px 0' }}>奄美大島におけるアートパドルの普及・競技者育成・地域コミュニティの形成</td>
                 </tr>
               </tbody>
             </table>
@@ -61,7 +61,7 @@ export default function AboutPage() {
       <section className="cta-section">
         <div className="container">
           <p className="cta-section-label">Join Us</p>
-          <h2>奄美ピックルボール協会へのお問い合わせ</h2>
+          <h2>あまねくアートパドル協会へのお問い合わせ</h2>
           <p>入会・見学・スポンサーなど、お気軽にご連絡ください。</p>
           <div className="cta-buttons">
             <a href="/contact/" className="btn btn-accent">お問い合わせ</a>

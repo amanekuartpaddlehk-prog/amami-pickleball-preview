@@ -41,7 +41,7 @@ function LoginForm() {
             fontWeight: 900,
             color: '#0a3d2e',
             letterSpacing: '-0.02em',
-          }}>AMAMI PICKLEBALL</h1>
+          }}>ART PADDLE</h1>
           <p style={{ fontSize: '0.8125rem', color: '#64748b', marginTop: '4px' }}>
             一般社団法人アチーブエイト
           </p>
@@ -133,7 +133,7 @@ function LoginForm() {
         </form>
 
         <p style={{ textAlign: 'center', fontSize: '0.75rem', color: '#94a3b8', marginTop: '24px' }}>
-          奄美ピックルボール協会 デザインプレビュー
+          あまねくアートパドル協会 デザインプレビュー
         </p>
       </div>
     </div>

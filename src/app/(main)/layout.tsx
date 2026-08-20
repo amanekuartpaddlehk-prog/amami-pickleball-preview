@@ -1,5 +1,5 @@
 const navItems = [
-  { href: '/about-pickleball/', label: 'ピックルボールとは' },
+  { href: '/about-pickleball/', label: 'アートパドルとは' },
   { href: '/about/', label: '協会について' },
   { href: '/events/', label: 'イベント' },
   { href: '/contact/', label: 'お問い合わせ' },
@@ -11,8 +11,8 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <header className="site-header" id="site-header">
         <div className="header-inner">
           <a href="/" className="site-logo">
-            <span className="logo-en">AMAMI</span>
-            <span className="logo-ja">ピックルボール協会</span>
+            <span className="logo-en">ART PADDLE</span>
+            <span className="logo-ja">アートパドル協会</span>
           </a>
           <nav className="site-nav" aria-label="メインナビゲーション">
             <ul className="nav-list">
@@ -42,10 +42,10 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
         <div className="footer-inner container">
           <div className="footer-brand">
             <a href="/" className="site-logo">
-              <span className="logo-en">AMAMI</span>
-              <span className="logo-ja">ピックルボール協会</span>
+              <span className="logo-en">ART PADDLE</span>
+              <span className="logo-ja">アートパドル協会</span>
             </a>
-            <p className="footer-tagline">奄美から、スポーツで繋がる。</p>
+            <p className="footer-tagline">アートとスポーツで、島から世界へ。</p>
           </div>
           <nav className="footer-nav" aria-label="フッターナビゲーション">
             <ul>
@@ -56,7 +56,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </div>
         <div className="footer-bottom">
-          <p>© 2025 一般社団法人アチーブエイト / 奄美ピックルボール協会</p>
+          <p>© 2025 一般社団法人アチーブエイト / あまねくアートパドル協会</p>
         </div>
       </footer>
     </>

@@ -4,14 +4,14 @@ export default function AboutPickleballPage() {
     { icon: <IconTrend />, title: 'すぐに上達できる', desc: 'シンプルなルールと小さいコートで、初心者でも短時間で楽しめます。' },
     { icon: <IconHeart />, title: '体への負担が少ない', desc: 'テニスほどの体力は不要。関節への負担も少なく長く続けられます。' },
     { icon: <IconPeople />, title: '仲間が自然に増える', desc: 'ダブルスが基本のスポーツ。一緒にプレーする中で自然とつながりができます。' },
-    { icon: <IconYen />, title: '手軽に始められる', desc: '道具はパドル1本。協会では初回の貸し出しも行っています。' },
+    { icon: <IconYen />, title: '手軽に始められる', desc: '道具はパドル1本。協会では初回の道具貸し出しも行っています。' },
     { icon: <IconGlobe />, title: '世界で急速に普及中', desc: 'アメリカ発で世界60カ国以上でプレーされています。' },
   ]
   return (
     <main id="main-content">
       <section className="page-hero">
-        <p className="page-hero-label">About Pickleball</p>
-        <h1>ピックルボールとは</h1>
+        <p className="page-hero-label">About Art Paddle</p>
+        <h1>アートパドルとは</h1>
       </section>
 
       <section className="section bg-surface">
@@ -19,8 +19,8 @@ export default function AboutPickleballPage() {
           <div className="pickleball-intro animate-on-scroll">
             <div>
               <span className="section-label">What is Pickleball?</span>
-              <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '20px', wordBreak: 'keep-all' }}>テニス・卓球・バドミントンを組み合わせた新しいスポーツ</h2>
-              <p>ピックルボールは1965年にアメリカで生まれたラケットスポーツです。テニスコートの約4分の1のサイズのコートで、穴の空いたプラスチックボールとパドルを使います。</p>
+              <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '20px', wordBreak: 'keep-all' }}>テニス・卓球・バドミントンを組み合わせた新感覚スポーツ</h2>
+              <p>アートパドル（ピックルボール）は1965年にアメリカで生まれたラケットスポーツです。テニスコートの約4分の1のサイズのコートで、穴の空いたプラスチックボールとパドルを使います。</p>
               <p>ルールが覚えやすく、激しい走り込みが少ないため、年齢・体力に関わらず誰でも楽しめます。アメリカでは現在最も成長しているスポーツとして注目され、日本でも急速に広まっています。</p>
               <a href="/contact/" className="btn btn-primary" style={{ marginTop: '24px' }}>お問い合わせ・体験申込</a>
             </div>
@@ -35,7 +35,7 @@ export default function AboutPickleballPage() {
         <div className="container">
           <div className="section-header animate-on-scroll">
             <span className="section-label">Features</span>
-            <h2 className="section-title">ピックルボールの6つの特長</h2>
+            <h2 className="section-title">アートパドルの6つの特長</h2>
           </div>
           <div className="pickleball-features">
             {features.map(({ icon, title, desc }) => (
@@ -53,7 +53,7 @@ export default function AboutPickleballPage() {
         <div className="container">
           <p className="cta-section-label">Try it!</p>
           <h2>まずは体験してみませんか</h2>
-          <p>奄美大島で一緒にピックルボールを楽しみましょう。初心者向け体験会も定期開催中です。</p>
+          <p>奄美大島で一緒にアートパドルを楽しみましょう。初心者向け体験会も定期開催中です。</p>
           <div className="cta-buttons">
             <a href="/contact/" className="btn btn-accent">お問い合わせ・参加申込</a>
           </div>
