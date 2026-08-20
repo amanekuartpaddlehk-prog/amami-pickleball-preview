@@ -16,7 +16,7 @@ export default function HomePage() {
           <p className="hero-title-ja">アートとスポーツで、島から世界へ。</p>
           <p className="hero-desc">アートパドルは年齢・体力に関わらず誰でも楽しめるスポーツです。奄美大島でいっしょに始めませんか。</p>
           <div className="hero-cta">
-            <a href="/contact/" className="btn btn-accent">お問い合わせ・体験申込 &rarr;</a>
+            <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="btn btn-accent">お問い合わせ・体験申込 &rarr;</a>
           </div>
           <div className="scroll-indicator animate-on-scroll">
             <div className="scroll-indicator-arrow"></div>
@@ -110,12 +110,12 @@ export default function HomePage() {
           <h2>一緒にアートパドルを始めませんか</h2>
           <p>まずはお気軽にお問い合わせください。体験会の日程もご案内します。</p>
           <div className="cta-buttons">
-            <a href="/contact/" className="btn btn-accent">お問い合わせ・体験申込</a>
+            <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="btn btn-accent">お問い合わせ・体験申込</a>
           </div>
         </div>
       </section>
 
-      <a href="/contact/" className="sticky-cta-mobile btn btn-primary">お問い合わせ・体験申込</a>
+      <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="sticky-cta-mobile btn btn-primary">お問い合わせ・体験申込</a>
     </main>
   )
 }

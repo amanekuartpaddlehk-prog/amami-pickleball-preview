@@ -2,7 +2,7 @@ const navItems = [
   { href: '/about-pickleball/', label: 'アートパドルとは' },
   { href: '/about/', label: '協会について' },
   { href: '/events/', label: 'イベント' },
-  { href: '/contact/', label: 'お問い合わせ' },
+  { href: 'https://achieve8.jp/contact', label: 'お問い合わせ' },
 ]
 
 function Logo({ size = 48 }: { size?: number }) {
@@ -42,7 +42,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
               ))}
             </ul>
           </nav>
-          <a href="/contact/" className="header-cta">お問い合わせ</a>
+          <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="header-cta">お問い合わせ</a>
           <button className="hamburger" aria-label="メニューを開く" aria-expanded="false">
             <span></span><span></span><span></span>
           </button>
@@ -53,7 +53,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
               <li key={href}><a href={href}>{label}</a></li>
             ))}
           </ul>
-          <a href="/contact/" className="btn btn-accent mobile-cta">お問い合わせ</a>
+          <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="btn btn-accent mobile-cta">お問い合わせ</a>
         </div>
       </header>
 

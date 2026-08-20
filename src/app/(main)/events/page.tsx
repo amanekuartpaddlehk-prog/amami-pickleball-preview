@@ -22,11 +22,11 @@ export default function EventsPage() {
           <h2>イベントのご案内を受け取る</h2>
           <p>新しいイベントの情報はお問い合わせからご案内します。</p>
           <div className="cta-buttons">
-            <a href="/contact/" className="btn btn-accent">お問い合わせ</a>
+            <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="btn btn-accent">お問い合わせ</a>
           </div>
         </div>
       </section>
-      <a href="/contact/" className="sticky-cta-mobile btn btn-primary">お問い合わせ・参加する</a>
+      <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="sticky-cta-mobile btn btn-primary">お問い合わせ・参加する</a>
     </main>
   )
 }

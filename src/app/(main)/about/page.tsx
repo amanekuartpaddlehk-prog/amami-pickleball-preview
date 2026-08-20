@@ -82,7 +82,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-          <a href="/contact/" className="btn btn-accent animate-on-scroll">お問い合わせ・体験申込 &rarr;</a>
+          <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="btn btn-accent animate-on-scroll">お問い合わせ・体験申込 &rarr;</a>
         </div>
       </section>
 
@@ -92,11 +92,11 @@ export default function AboutPage() {
           <h2>あまねくアートパドル協会へのお問い合わせ</h2>
           <p>入会・見学・スポンサーなど、お気軽にご連絡ください。</p>
           <div className="cta-buttons">
-            <a href="/contact/" className="btn btn-accent">お問い合わせ</a>
+            <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="btn btn-accent">お問い合わせ</a>
           </div>
         </div>
       </section>
-      <a href="/contact/" className="sticky-cta-mobile btn btn-primary">お問い合わせ・参加する</a>
+      <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="sticky-cta-mobile btn btn-primary">お問い合わせ・参加する</a>
     </main>
   )
 }
