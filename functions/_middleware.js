@@ -1,4 +1,4 @@
-const PUBLIC_PREFIXES = ['/login', '/api/login']
+const PUBLIC_PREFIXES = ['/login', '/api/login', '/api/webhook']
 const STATIC_EXTS = /\.(css|js|ico|png|jpg|jpeg|svg|webp|woff2?|ttf|gif|mp4|json)$/i
 const AUTH_COOKIE = 'pb-staging'
 const AUTH_VALUE = 'amami-pb-auth-2025'
