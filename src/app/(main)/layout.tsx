@@ -2,6 +2,7 @@ const navItems = [
   { href: '/about-pickleball/', label: 'アートパドルとは' },
   { href: '/about/', label: '協会について' },
   { href: '/events/', label: 'イベント' },
+  { href: '/#news', label: 'お知らせ' },
   { href: 'https://achieve8.jp/', label: 'achieve8について', external: true },
 ]
 

@@ -85,7 +85,7 @@ export default async function HomePage() {
       </section>
 
       {/* ④ 最新のお知らせ */}
-      <section className="section bg-surface">
+      <section id="news" className="section bg-surface">
         <div className="container">
           <div className="section-header animate-on-scroll">
             <span className="section-label">News</span>
