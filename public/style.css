@@ -54,6 +54,12 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/* 日本語テキスト改行制御: 単語途中での折り返しを防ぐ */
+p, h1, h2, h3, h4, blockquote, li {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
 body {
   font-family: var(--font-body);
   font-weight: 400;
@@ -250,6 +256,7 @@ p:last-child {
   color: #fff;
   transition: color var(--transition);
   letter-spacing: 0.06em;
+  white-space: nowrap;
 }
 
 .site-logo .logo-text span {
@@ -276,8 +283,6 @@ p:last-child {
   gap: 8px;
 }
 
-/* ロゴでトップに戻れるため「トップ」メニュー項目は非表示 */
-.nav-list li:first-child { display: none; }
 
 .nav-list li a {
   font-family: var(--font-body);
@@ -1007,6 +1012,20 @@ p:last-child {
 }
 
 .footer-back-top:hover {
+  color: #fff;
+}
+
+.footer-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.footer-instagram:hover {
   color: #fff;
 }
 
