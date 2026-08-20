@@ -2,7 +2,7 @@ const navItems = [
   { href: '/about-pickleball/', label: 'アートパドルとは' },
   { href: '/about/', label: '協会について' },
   { href: '/events/', label: 'イベント' },
-  { href: 'https://achieve8.jp/contact', label: 'お問い合わせ' },
+  { href: 'https://achieve8.jp/', label: 'achieve8について', external: true },
 ]
 
 function Logo({ size = 48 }: { size?: number }) {
@@ -37,8 +37,8 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
           </div>
           <nav className="site-nav" aria-label="メインナビゲーション">
             <ul className="nav-list">
-              {navItems.map(({ href, label }) => (
-                <li key={href}><a href={href}>{label}</a></li>
+              {navItems.map(({ href, label, external }) => (
+                <li key={href}><a href={href} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{label}</a></li>
               ))}
             </ul>
           </nav>
@@ -49,8 +49,8 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
         </div>
         <div className="mobile-menu" aria-hidden="true">
           <ul className="mobile-nav-list">
-            {navItems.map(({ href, label }) => (
-              <li key={href}><a href={href}>{label}</a></li>
+            {navItems.map(({ href, label, external }) => (
+              <li key={href}><a href={href} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{label}</a></li>
             ))}
           </ul>
           <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="btn btn-accent mobile-cta">お問い合わせ</a>
@@ -81,8 +81,8 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
           </div>
           <nav className="footer-nav" aria-label="フッターナビゲーション">
             <ul>
-              {navItems.map(({ href, label }) => (
-                <li key={href}><a href={href}>{label}</a></li>
+              {navItems.map(({ href, label, external }) => (
+                <li key={href}><a href={href} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{label}</a></li>
               ))}
             </ul>
           </nav>

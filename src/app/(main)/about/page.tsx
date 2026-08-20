@@ -27,13 +27,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-surface" style={{ paddingBlock: 0 }}>
-        <div style={{ maxWidth: 'var(--container-max)', marginInline: 'auto' }}>
-          <img src="/assets/images/about-us.jpg" alt="あまねくアートパドル協会の活動風景" loading="lazy" style={{ width: '100%', maxHeight: '480px', objectFit: 'cover', display: 'block' }} />
-        </div>
-      </section>
-
-      <section className="section bg-surface">
+<section className="section bg-surface">
         <div className="container" style={{ maxWidth: '800px' }}>
           <div className="section-header animate-on-scroll">
             <span className="section-label">Organization</span>
