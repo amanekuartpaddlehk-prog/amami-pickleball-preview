@@ -924,6 +924,12 @@ p:last-child {
   padding-top: clamp(48px, 8vw, 80px);
 }
 
+@media (max-width: 768px) {
+  .site-footer {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 .footer-inner {
   max-width: var(--container-max);
   margin-inline: auto;
@@ -1069,9 +1075,13 @@ p:last-child {
    ============================================ */
 .pickleball-intro {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(40px, 6vw, 80px);
   align-items: center;
+}
+
+.pickleball-intro > * {
+  min-width: 0;
 }
 
 .pickleball-intro-image {

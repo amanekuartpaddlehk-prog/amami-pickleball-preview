@@ -76,10 +76,23 @@
   }
 }
 
-.hero-label  { animation: heroFadeIn 0.8s ease 0.2s both; }
-.hero-title  { animation: heroFadeIn 0.8s ease 0.4s both; }
-.hero-title-ja { animation: heroFadeIn 0.8s ease 0.6s both; }
-.hero-cta    { animation: heroFadeIn 0.8s ease 0.8s both; }
+.hero-label  { animation: heroFadeIn 0.6s ease 0.05s both; }
+.hero-title  { animation: heroFadeIn 0.6s ease 0.15s both; }
+.hero-title-ja { animation: heroFadeIn 0.6s ease 0.25s both; }
+.hero-cta    { animation: heroFadeIn 0.6s ease 0.35s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-label, .hero-title, .hero-title-ja, .hero-cta {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
 /* ============================================
    Sticky Mobile CTA
