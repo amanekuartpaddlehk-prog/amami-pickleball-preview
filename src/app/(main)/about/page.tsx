@@ -10,7 +10,7 @@ export default function AboutPage() {
       <section className="section bg-bg">
         <div className="container" style={{ maxWidth: '900px' }}>
           <div className="mission-block animate-on-scroll">
-            <blockquote style={{ fontSize: 'clamp(1.5rem,3vw,2.5rem)' }}>「奄美から、スポーツで繋がる。」</blockquote>
+            <blockquote style={{ fontSize: 'clamp(1.5rem,3vw,2.5rem)' }}>「アートとスポーツで、島から世界へ。」</blockquote>
             <p>奄美大島を拠点に、アートパドルを通じた地域コミュニティの活性化と、スポーツの普及に取り組んでいます。初心者から上級者まで、島の皆さんが笑顔でスポーツを楽しめる環境づくりを目指しています。</p>
           </div>
         </div>
