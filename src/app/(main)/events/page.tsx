@@ -1,3 +1,6 @@
+import type { Metadata } from 'next'
+export const metadata: Metadata = { title: 'イベント・大会 | あまねくアートパドル協会', description: 'あまねくアートパドル協会が主催・参加するイベント・大会情報をお届けします。' }
+
 export default function EventsPage() {
   return (
     <main id="main-content">

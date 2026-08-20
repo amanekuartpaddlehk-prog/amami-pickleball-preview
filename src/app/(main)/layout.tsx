@@ -10,10 +10,11 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
     <>
       <header className="site-header" id="site-header">
         <div className="header-inner">
-          <a href="/" className="site-logo">
-            <span className="logo-en">ART PADDLE</span>
-            <span className="logo-ja">アートパドル協会</span>
-          </a>
+          <div className="site-logo">
+            <a href="/" className="logo-text">
+              あまねく<span>アートパドル</span>協会
+            </a>
+          </div>
           <nav className="site-nav" aria-label="メインナビゲーション">
             <ul className="nav-list">
               {navItems.map(({ href, label }) => (
@@ -26,7 +27,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
             <span></span><span></span><span></span>
           </button>
         </div>
-        <div className="mobile-nav" aria-hidden="true">
+        <div className="mobile-menu" aria-hidden="true">
           <ul className="mobile-nav-list">
             {navItems.map(({ href, label }) => (
               <li key={href}><a href={href}>{label}</a></li>
@@ -41,10 +42,11 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <footer className="site-footer">
         <div className="footer-inner container">
           <div className="footer-brand">
-            <a href="/" className="site-logo">
-              <span className="logo-en">ART PADDLE</span>
-              <span className="logo-ja">アートパドル協会</span>
-            </a>
+            <div className="site-logo">
+              <a href="/" className="logo-text">
+                あまねく<span>アートパドル</span>協会
+              </a>
+            </div>
             <p className="footer-tagline">アートとスポーツで、島から世界へ。</p>
           </div>
           <nav className="footer-nav" aria-label="フッターナビゲーション">

@@ -1,3 +1,6 @@
+import type { Metadata } from 'next'
+export const metadata: Metadata = { title: '協会について | あまねくアートパドル協会', description: '一般社団法人アチーブエイトが運営する、あまねくアートパドル協会の活動理念・法人概要・ビジョンをご紹介します。' }
+
 export default function AboutPage() {
   return (
     <main id="main-content">
@@ -53,8 +56,25 @@ export default function AboutPage() {
         <div className="container" style={{ maxWidth: '800px', textAlign: 'center' }}>
           <p className="animate-on-scroll" style={{ fontFamily: 'var(--font-heading-en)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--color-accent)', marginBottom: '14px' }}>Vision</p>
           <h2 className="animate-on-scroll" style={{ fontSize: 'clamp(1.25rem,3vw,2rem)', color: '#fff', marginBottom: '16px', wordBreak: 'keep-all' }}>奄美ウェルビーイング・スポーツアイランド構想</h2>
-          <p className="animate-on-scroll" style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '32px', lineHeight: 1.9 }}>スポーツで人がつながり、奄美から日本を元気にする。<br />5つの柱で描く、島の未来ビジョンをご覧ください。</p>
-          <a href="/contact/" className="btn btn-accent animate-on-scroll">お問い合わせ・参加する &rarr;</a>
+          <p className="animate-on-scroll" style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '28px', lineHeight: 1.9 }}>スポーツで人がつながり、奄美から世界に発信する。<br />あまねくアートパドル協会が描く5つのビジョン。</p>
+          <div className="animate-on-scroll" style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '32px', textAlign: 'left' }}>
+            {[
+              ['①', 'キッズ育成', '島の子どもたちにスポーツの喜びを。放課後・休日の体験プログラム'],
+              ['②', 'シニア健康', '関節に優しく、誰でも長く続けられる生涯スポーツ'],
+              ['③', 'ユニバーサル', '障がいの有無に関わらず、同じコートで楽しめる環境づくり'],
+              ['④', 'スポーツツーリズム', '大会・合宿誘致で奄美に人を呼ぶ新しい旅の形'],
+              ['⑤', 'Art × Sports', 'アートと融合したスポーツイベントで島の文化を世界へ'],
+            ].map(([num, title, desc]) => (
+              <div key={title} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start', background: 'rgba(255,255,255,0.07)', borderRadius: '8px', padding: '12px 16px' }}>
+                <span style={{ fontFamily: 'var(--font-heading-en)', fontWeight: 900, color: 'var(--color-accent)', fontSize: '1rem', flexShrink: 0, minWidth: '24px' }}>{num}</span>
+                <div>
+                  <span style={{ color: '#fff', fontWeight: 700, fontSize: '0.9375rem' }}>{title}</span>
+                  <span style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.8125rem', marginLeft: '8px' }}>{desc}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <a href="/contact/" className="btn btn-accent animate-on-scroll">お問い合わせ・体験申込 &rarr;</a>
         </div>
       </section>
 

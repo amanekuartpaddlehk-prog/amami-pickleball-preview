@@ -1965,6 +1965,20 @@ p:last-child {
     display: flex;
   }
 
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .section-title {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+    overflow-wrap: anywhere;
+  }
+
+  .pickleball-intro h2.section-title {
+    font-size: clamp(1.125rem, 4.5vw, 1.5rem);
+  }
+
   .intro-grid {
     grid-template-columns: 1fr;
   }

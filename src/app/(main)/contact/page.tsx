@@ -1,3 +1,6 @@
+import type { Metadata } from 'next'
+export const metadata: Metadata = { title: 'お問い合わせ | あまねくアートパドル協会', description: '入会・体験申込・スポンサーなど、あまねくアートパドル協会へのお問い合わせはこちらから。' }
+
 export default function ContactPage() {
   return (
     <main id="main-content">

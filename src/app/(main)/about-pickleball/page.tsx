@@ -1,3 +1,6 @@
+import type { Metadata } from 'next'
+export const metadata: Metadata = { title: 'アートパドルとは | あまねくアートパドル協会', description: 'ピックルボールをベースにした新感覚スポーツ、アートパドルについて。特長・ルール・始め方を解説します。' }
+
 export default function AboutPickleballPage() {
   const features = [
     { icon: <IconUsers />, title: '全世代で楽しめる', desc: '子どもから高齢者まで、誰でも一緒にプレーできます。' },
