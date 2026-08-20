@@ -13,8 +13,8 @@ export default function AboutPickleballPage() {
   return (
     <main id="main-content">
       <section className="page-hero">
-        <p className="page-hero-label">About Art Paddle</p>
-        <h1>アートパドルとは</h1>
+        <p className="page-hero-label">About Pickleball</p>
+        <h1>ピックルボールとは</h1>
       </section>
 
       <section className="section bg-surface">

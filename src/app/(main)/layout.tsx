@@ -1,5 +1,5 @@
 const navItems = [
-  { href: '/about-pickleball/', label: 'アートパドルとは' },
+  { href: '/about-pickleball/', label: 'ピックルボールとは' },
   { href: '/about/', label: '協会について' },
   { href: '/events/', label: 'イベント' },
   { href: '/#news', label: 'お知らせ' },
