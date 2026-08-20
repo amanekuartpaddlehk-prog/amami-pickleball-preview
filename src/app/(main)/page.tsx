@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
+import { getNewsList, getUpcomingEvents } from '@/lib/microcms'
+
 export const metadata: Metadata = { title: 'あまねくアートパドル協会 | 奄美大島でアートパドルを楽しもう', description: 'アートとスポーツで島から世界へ。あまねくアートパドル協会は奄美大島を拠点に、年齢・体力を問わず楽しめるアートパドル（ピックルボール）の普及活動をしています。' }
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [newsList, eventsList] = await Promise.all([getNewsList(3), getUpcomingEvents(5)])
   return (
     <main id="main-content">
 
@@ -88,7 +91,19 @@ export default function HomePage() {
             <span className="section-label">News</span>
             <h2 className="section-title">最新のお知らせ</h2>
           </div>
-          <div className="no-posts"><p>まだ投稿がありません。</p></div>
+          {newsList.length > 0 ? (
+            <div className="news-grid">
+              {newsList.map(item => (
+                <article key={item.id} className="news-card animate-on-scroll">
+                  <time className="news-date">{new Date(item.publishedAt).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+                  {item.category && <span className="news-category">{item.category}</span>}
+                  <h3 className="news-title">{item.title}</h3>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div className="no-posts"><p>まだ投稿がありません。</p></div>
+          )}
         </div>
       </section>
 
@@ -99,7 +114,20 @@ export default function HomePage() {
             <span className="section-label">Events</span>
             <h2 className="section-title">直近のイベント</h2>
           </div>
-          <div className="no-posts"><p>現在予定されているイベントはありません。お問い合わせください。</p></div>
+          {eventsList.length > 0 ? (
+            <div className="events-grid">
+              {eventsList.map(item => (
+                <article key={item.id} className="event-card animate-on-scroll">
+                  <time className="event-date">{new Date(item.date).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+                  <h3 className="event-title">{item.title}</h3>
+                  {item.location && <p className="event-location">📍 {item.location}</p>}
+                  {item.description && <p className="event-desc">{item.description}</p>}
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div className="no-posts"><p>現在予定されているイベントはありません。お問い合わせください。</p></div>
+          )}
         </div>
       </section>
 
