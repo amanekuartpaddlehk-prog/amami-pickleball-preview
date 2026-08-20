@@ -1,3 +1,4 @@
+const STAGING_HOSTNAME = 'amami-pickleball-preview.pages.dev'
 const PUBLIC_PREFIXES = ['/login', '/api/login', '/api/webhook']
 const STATIC_EXTS = /\.(css|js|ico|png|jpg|jpeg|svg|webp|woff2?|ttf|gif|mp4|json)$/i
 const AUTH_COOKIE = 'pb-staging'
@@ -6,6 +7,10 @@ const AUTH_VALUE = 'amami-pb-auth-2025'
 export async function onRequest(context) {
   const { request, next } = context
   const url = new URL(request.url)
+
+  // 本番ドメインは認証不要
+  if (url.hostname !== STAGING_HOSTNAME) return next()
+
   const path = url.pathname
 
   // 静的ファイル・ログインページはスルー
