@@ -23,12 +23,12 @@ export default function AboutPickleballPage() {
             <div>
               <span className="section-label">What is Art Paddle?</span>
               <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '20px', wordBreak: 'keep-all' }}>テニス・卓球・バドミントンを組み合わせた新感覚スポーツ</h2>
-              <p>アートパドル（ピックルボール）は1965年にアメリカで生まれたラケットスポーツです。テニスコートの約4分の1のサイズのコートで、穴の空いたプラスチックボールとパドルを使います。</p>
+              <p>ピックルボールは1965年にアメリカで生まれたラケットスポーツです。テニスコートの約4分の1のサイズのコートで、穴の空いたプラスチックボールとパドルを使います。</p>
               <p>ルールが覚えやすく、激しい走り込みが少ないため、年齢・体力に関わらず誰でも楽しめます。アメリカでは現在最も成長しているスポーツとして注目され、日本でも急速に広まっています。</p>
               <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ marginTop: '24px' }}>お問い合わせ・体験申込</a>
             </div>
             <div className="pickleball-intro-image">
-              <img src="/assets/images/about-pb.jpg" alt="アートパドルの試合の様子" loading="lazy" />
+              <img src="/assets/images/about-pb.jpg" alt="ピックルボールの試合の様子" loading="lazy" />
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function AboutPickleballPage() {
         <div className="container">
           <div className="section-header animate-on-scroll">
             <span className="section-label">Features</span>
-            <h2 className="section-title">アートパドルの6つの特長</h2>
+            <h2 className="section-title">ピックルボールの6つの特長</h2>
           </div>
           <div className="pickleball-features">
             {features.map(({ icon, title, desc }) => (
@@ -56,7 +56,7 @@ export default function AboutPickleballPage() {
         <div className="container">
           <p className="cta-section-label">Try it!</p>
           <h2>まずは体験してみませんか</h2>
-          <p>奄美大島で一緒にアートパドルを楽しみましょう。初心者向け体験会も定期開催中です。</p>
+          <p>奄美大島で一緒にピックルボールを楽しみましょう。初心者向け体験会も定期開催中です。</p>
           <div className="cta-buttons">
             <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="btn btn-accent">お問い合わせ・参加申込</a>
           </div>

@@ -17,7 +17,7 @@ export default async function HomePage() {
           <span className="hero-label">Art Paddle Association</span>
           <h1 className="hero-title en-heading">ART PADDLE</h1>
           <p className="hero-title-ja">アートとスポーツで、島から世界へ。</p>
-          <p className="hero-desc">アートパドルは年齢や体力に関わらず、誰でも楽しめるスポーツです。奄美大島でいっしょに始めませんか。</p>
+          <p className="hero-desc">ピックルボールは年齢や体力に関わらず、誰でも楽しめるスポーツです。奄美大島でいっしょに始めませんか。</p>
           <div className="hero-cta">
             <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="btn btn-accent">お問い合わせ・体験申込 &rarr;</a>
           </div>

@@ -18,6 +18,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/assets/images/logo.jpg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/assets/images/logo.jpg" />
         <link rel="stylesheet" href="/style.css" />
         <link rel="stylesheet" href="/animations.css" />
       </head>
