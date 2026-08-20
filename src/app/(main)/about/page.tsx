@@ -12,6 +12,14 @@ export default function AboutPage() {
 
       <section className="section bg-bg">
         <div className="container" style={{ maxWidth: '900px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 'clamp(40px,6vw,64px)' }}>
+            <img
+              src="/assets/images/logo.jpg"
+              alt="あまねく AMAMI PICKLEBALL"
+              className="animate-on-scroll"
+              style={{ width: 'clamp(140px,22vw,200px)', height: 'clamp(140px,22vw,200px)', objectFit: 'cover', borderRadius: '50%', boxShadow: '0 8px 32px rgba(0,0,0,0.12)' }}
+            />
+          </div>
           <div className="mission-block animate-on-scroll">
             <blockquote style={{ fontSize: 'clamp(1.5rem,3vw,2.5rem)' }}>「アートとスポーツで、島から世界へ。」</blockquote>
             <p>奄美大島を拠点に、アートパドルを通じた地域コミュニティの活性化と、スポーツの普及に取り組んでいます。初心者から上級者まで、島の皆さんが笑顔でスポーツを楽しめる環境づくりを目指しています。</p>

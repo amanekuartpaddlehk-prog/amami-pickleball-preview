@@ -5,14 +5,34 @@ const navItems = [
   { href: '/contact/', label: 'お問い合わせ' },
 ]
 
+function Logo({ size = 48 }: { size?: number }) {
+  return (
+    <img
+      src="/assets/images/logo.jpg"
+      alt="あまねく AMAMI PICKLEBALL"
+      width={size}
+      height={size}
+      style={{
+        borderRadius: '50%',
+        objectFit: 'cover',
+        display: 'block',
+        background: '#fff',
+      }}
+    />
+  )
+}
+
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <header className="site-header" id="site-header">
         <div className="header-inner">
           <div className="site-logo">
-            <a href="/" className="logo-text">
-              あまねく<span>アートパドル</span>協会
+            <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+              <Logo size={44} />
+              <span className="logo-text" style={{ lineHeight: 1.2 }}>
+                あまねく<span>アートパドル</span>協会
+              </span>
             </a>
           </div>
           <nav className="site-nav" aria-label="メインナビゲーション">
@@ -42,11 +62,15 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <footer className="site-footer">
         <div className="footer-inner container">
           <div className="footer-brand">
-            <div className="site-logo">
-              <a href="/" className="logo-text">
-                あまねく<span>アートパドル</span>協会
-              </a>
-            </div>
+            <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none', marginBottom: '12px' }}>
+              <Logo size={56} />
+              <div>
+                <span className="logo-text" style={{ display: 'block', lineHeight: 1.3 }}>
+                  あまねく<span>アートパドル</span>協会
+                </span>
+                <span style={{ display: 'block', fontFamily: 'var(--font-heading-en)', fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.15em' }}>AMAMI PICKLEBALL est. 2026</span>
+              </div>
+            </a>
             <p className="footer-tagline">アートとスポーツで、島から世界へ。</p>
           </div>
           <nav className="footer-nav" aria-label="フッターナビゲーション">
@@ -58,7 +82,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </div>
         <div className="footer-bottom">
-          <p>© 2025 一般社団法人アチーブエイト / あまねくアートパドル協会</p>
+          <p>© 2026 一般社団法人アチーブエイト / あまねくアートパドル協会</p>
         </div>
       </footer>
     </>

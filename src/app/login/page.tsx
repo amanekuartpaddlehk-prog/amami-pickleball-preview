@@ -26,6 +26,11 @@ function LoginForm() {
       }}>
         {/* ロゴ */}
         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+          <img
+            src="/assets/images/logo.jpg"
+            alt="あまねく AMAMI PICKLEBALL"
+            style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '50%', display: 'block', margin: '0 auto 12px' }}
+          />
           <p style={{
             fontFamily: "'Outfit', sans-serif",
             fontSize: '0.7rem',
@@ -33,16 +38,9 @@ function LoginForm() {
             letterSpacing: '0.3em',
             textTransform: 'uppercase',
             color: '#1a6b5a',
-            marginBottom: '6px',
+            marginBottom: '4px',
           }}>Staging Preview</p>
-          <h1 style={{
-            fontFamily: "'Outfit', sans-serif",
-            fontSize: '1.5rem',
-            fontWeight: 900,
-            color: '#0a3d2e',
-            letterSpacing: '-0.02em',
-          }}>ART PADDLE</h1>
-          <p style={{ fontSize: '0.8125rem', color: '#64748b', marginTop: '4px' }}>
+          <p style={{ fontSize: '0.8125rem', color: '#64748b' }}>
             一般社団法人アチーブエイト
           </p>
         </div>
