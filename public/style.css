@@ -582,6 +582,8 @@ p:last-child {
   font-size: clamp(1.125rem, 2.5vw, 1.5rem);
   margin-bottom: 12px;
   color: var(--color-primary);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 .intro-card p {
