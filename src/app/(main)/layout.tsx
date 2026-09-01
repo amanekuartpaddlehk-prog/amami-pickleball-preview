@@ -1,10 +1,8 @@
-const navItems = [
-  { href: '/about-pickleball/', label: 'ピックルボールとは' },
-  { href: '/about/', label: '協会について' },
-  { href: '/events/', label: 'イベント' },
-  { href: '/#news', label: 'お知らせ' },
-  { href: 'https://achieve8.jp/', label: 'achieve8について', external: true },
-]
+'use client'
+
+import { useLanguage } from '@/context/LanguageContext'
+import { translations } from '@/lib/translations'
+import type { Lang } from '@/lib/translations'
 
 function Logo({ size = 48 }: { size?: number }) {
   return (
@@ -23,7 +21,24 @@ function Logo({ size = 48 }: { size?: number }) {
   )
 }
 
+const LANGS: { code: Lang; label: string }[] = [
+  { code: 'ja', label: 'JP' },
+  { code: 'en', label: 'EN' },
+  { code: 'fr', label: 'FR' },
+]
+
 export default function MainLayout({ children }: { children: React.ReactNode }) {
+  const { lang, setLang } = useLanguage()
+  const tr = translations[lang]
+
+  const navItems = [
+    { href: '/about-pickleball/', label: tr.nav.pickleball },
+    { href: '/about/', label: tr.nav.about },
+    { href: '/events/', label: tr.nav.events },
+    { href: '/#news', label: tr.nav.news },
+    { href: 'https://achieve8.jp/', label: tr.nav.achieve8, external: true },
+  ]
+
   return (
     <>
       <header className="site-header" id="site-header">
@@ -43,18 +58,42 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
               ))}
             </ul>
           </nav>
-          <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="header-cta">お問い合わせ</a>
-          <button className="hamburger" aria-label="メニューを開く" aria-expanded="false">
+          <div className="lang-switcher">
+            {LANGS.map(({ code, label }) => (
+              <button
+                key={code}
+                className={`lang-btn${lang === code ? ' active' : ''}`}
+                onClick={() => setLang(code)}
+                aria-label={`Switch to ${label}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="header-cta">{tr.nav.contact}</a>
+          <button className="hamburger" aria-label={tr.header.menuOpen} aria-expanded="false">
             <span></span><span></span><span></span>
           </button>
         </div>
         <div className="mobile-menu" aria-hidden="true">
+          <div className="lang-switcher lang-switcher-mobile">
+            {LANGS.map(({ code, label }) => (
+              <button
+                key={code}
+                className={`lang-btn${lang === code ? ' active' : ''}`}
+                onClick={() => setLang(code)}
+                aria-label={`Switch to ${label}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
           <ul className="mobile-nav-list">
             {navItems.map(({ href, label, external }) => (
               <li key={href}><a href={href} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{label}</a></li>
             ))}
           </ul>
-          <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="btn btn-accent mobile-cta">お問い合わせ</a>
+          <a href="https://achieve8.jp/contact" target="_blank" rel="noopener noreferrer" className="btn btn-accent mobile-cta">{tr.nav.contact}</a>
         </div>
       </header>
 
@@ -72,13 +111,13 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
                 <span style={{ display: 'block', fontFamily: 'var(--font-heading-en)', fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.15em' }}>AMAMI PICKLEBALL est. 2026</span>
               </div>
             </a>
-            <p className="footer-tagline">アートとスポーツで、島から世界へ。</p>
-          <a href="https://www.instagram.com/amami_pickle/" target="_blank" rel="noopener noreferrer" className="footer-instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-            </svg>
-            @amami_pickle
-          </a>
+            <p className="footer-tagline">{tr.footer.tagline}</p>
+            <a href="https://www.instagram.com/amami_pickle/" target="_blank" rel="noopener noreferrer" className="footer-instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+              @amami_pickle
+            </a>
           </div>
           <nav className="footer-nav" aria-label="フッターナビゲーション">
             <ul>
@@ -89,7 +128,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </div>
         <div className="footer-bottom">
-          <p>© 2026 一般社団法人アチーブエイト / あまねくアートパドル協会</p>
+          <p>{tr.footer.copyright}</p>
         </div>
       </footer>
     </>

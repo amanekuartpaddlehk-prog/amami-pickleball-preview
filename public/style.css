@@ -280,19 +280,21 @@ p:last-child {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
+  flex-wrap: nowrap;
 }
 
 
 .nav-list li a {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: rgba(255,255,255,0.9);
-  padding: 0 0.6rem;
+  padding: 0 0.5rem;
   border-radius: var(--radius-sm);
   transition: color var(--transition), background var(--transition);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .nav-list li a:hover,
@@ -310,6 +312,66 @@ p:last-child {
 .scrolled .nav-list li.current-menu-item > a {
   color: var(--color-primary);
   background: rgba(26, 107, 90, 0.08);
+}
+
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.lang-btn {
+  font-family: var(--font-heading-en);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.6);
+  padding: 4px 7px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.1);
+}
+
+.lang-btn.active {
+  color: var(--color-accent);
+  background: rgba(212,168,87,0.15);
+}
+
+.scrolled .lang-btn {
+  color: var(--color-muted);
+}
+
+.scrolled .lang-btn:hover {
+  color: var(--color-text);
+  background: rgba(0,0,0,0.06);
+}
+
+.scrolled .lang-btn.active {
+  color: var(--color-primary);
+  background: rgba(26,107,90,0.1);
+}
+
+.lang-switcher-mobile {
+  padding: 16px 24px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 8px;
+}
+
+.lang-switcher-mobile .lang-btn {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+.lang-switcher-mobile .lang-btn.active {
+  color: var(--color-accent);
+  background: rgba(212,168,87,0.15);
 }
 
 .header-cta {
@@ -1987,7 +2049,8 @@ p:last-child {
 
 @media (max-width: 768px) {
   .site-nav,
-  .header-cta {
+  .header-cta,
+  .lang-switcher:not(.lang-switcher-mobile) {
     display: none;
   }
 
