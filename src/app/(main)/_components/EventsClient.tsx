@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
+
 import { useLanguage } from '@/context/LanguageContext'
 import { translations } from '@/lib/translations'
 
@@ -26,6 +28,59 @@ export function EventsClient({
 }) {
   const { lang } = useLanguage()
   const tr = translations[lang].events
+  const heroDescRef = useRef<HTMLParagraphElement>(null)
+
+  useEffect(() => {
+    const element = heroDescRef.current
+    if (!element) return
+
+    const fitSingleLine = () => {
+      // PCでは既存デザインに戻す
+      if (window.innerWidth > 768) {
+        element.style.fontSize = ''
+        element.style.whiteSpace = ''
+        return
+      }
+
+      const maxSize = 16
+      const minSize = 9
+      const step = 0.25
+
+      element.style.whiteSpace = 'nowrap'
+      element.style.fontSize = `${maxSize}px`
+
+      const availableWidth = element.clientWidth
+      let size = maxSize
+
+      while (
+        element.scrollWidth > availableWidth &&
+        size > minSize
+      ) {
+        size -= step
+        element.style.fontSize = `${size}px`
+      }
+    }
+
+    fitSingleLine()
+
+    const timer = window.setTimeout(
+      fitSingleLine,
+      150
+    )
+
+    window.addEventListener(
+      'resize',
+      fitSingleLine
+    )
+
+    return () => {
+      window.clearTimeout(timer)
+      window.removeEventListener(
+        'resize',
+        fitSingleLine
+      )
+    }
+  }, [lang])
 
   return (
     <main id="main-content">
@@ -36,7 +91,12 @@ export function EventsClient({
 
         <h1>{tr.heroTitle}</h1>
 
-        <p>{tr.heroDesc}</p>
+        <p
+          ref={heroDescRef}
+          className="events-hero-desc"
+        >
+          {tr.heroDesc}
+        </p>
       </section>
 
       <section className="section bg-surface">

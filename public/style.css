@@ -2332,3 +2332,25 @@ p:last-child {
 }
 
 /* ===== EVENT CMS V2 END ===== */\n
+
+/* ===== EVENTS HERO AUTOFIT START ===== */
+
+.events-hero-desc {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .events-hero-desc {
+    width: 100%;
+    max-width: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    line-height: 1.6;
+    overflow: hidden;
+  }
+}
+
+/* ===== EVENTS HERO AUTOFIT END ===== */
