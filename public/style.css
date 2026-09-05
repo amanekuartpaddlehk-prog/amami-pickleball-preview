@@ -2396,3 +2396,35 @@ p:last-child {
 }
 
 /* ===== EVENT TITLE + SCHEDULE END ===== */
+
+/* ===== EVENT META MOBILE AUTOSIZE START ===== */
+
+@media (max-width: 768px) {
+  /* 開催日時・場所はスマホ幅に合わせて自動縮小 */
+  .event-meta-bar {
+    gap: 18px;
+  }
+
+  .event-meta-bar-item {
+    align-items: flex-start;
+    gap: 10px;
+
+    /* 画面幅に応じて約11〜13pxの間で自動調整 */
+    font-size: clamp(11px, 3.05vw, 13px);
+    line-height: 1.75;
+  }
+
+  .event-meta-bar-icon {
+    flex: 0 0 auto;
+    margin-top: 0.35em;
+    font-size: 0.9em;
+  }
+
+  .event-schedule-text {
+    min-width: 0;
+    font-size: inherit;
+    line-height: 1.75;
+  }
+}
+
+/* ===== EVENT META MOBILE AUTOSIZE END ===== */
