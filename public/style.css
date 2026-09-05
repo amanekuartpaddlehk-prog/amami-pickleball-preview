@@ -2428,3 +2428,163 @@ p:last-child {
 }
 
 /* ===== EVENT META MOBILE AUTOSIZE END ===== */
+
+/* ===== ABOUT HUMAN STORY START ===== */
+
+.about-story-section {
+  position: relative;
+}
+
+.about-story-container {
+  max-width: 880px;
+}
+
+.about-story-copy {
+  width: min(100%, 740px);
+  margin: 0 auto 48px;
+}
+
+.about-story-copy p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 2.05;
+}
+
+.about-story-copy p + p {
+  margin-top: 26px;
+}
+
+.about-community-card {
+  width: min(100%, 760px);
+  margin: 0 auto 40px;
+  padding: clamp(32px, 5vw, 50px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: #fff;
+}
+
+.about-community-card h3 {
+  margin: 0 0 24px;
+  color: var(--color-primary);
+  font-family: var(--font-heading-ja);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+}
+
+.about-community-card p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.975rem;
+  line-height: 2.05;
+}
+
+.about-spice-card {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: clamp(36px, 6vw, 58px);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(
+      135deg,
+      #0a3d2e 0%,
+      #1a6b5a 100%
+    );
+  color: #fff;
+}
+
+.about-spice-label {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--color-accent);
+  font-family: var(--font-heading-en);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.about-spice-card h3 {
+  margin: 0 0 28px;
+  color: var(--color-accent);
+  font-family: var(--font-heading-ja);
+  font-size: clamp(1.25rem, 3vw, 1.8rem);
+  line-height: 1.7;
+}
+
+.about-spice-card blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: rgba(255,255,255,0.92);
+  font-size: 0.975rem;
+  line-height: 2.05;
+}
+
+.about-spice-credit {
+  margin: 30px 0 0;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.about-spice-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--color-accent);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.about-spice-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .about-story-copy {
+    margin-bottom: 34px;
+  }
+
+  .about-story-copy p {
+    font-size: 0.93rem;
+    line-height: 1.95;
+  }
+
+  .about-community-card {
+    padding: 28px 22px;
+    margin-bottom: 28px;
+  }
+
+  .about-community-card h3 {
+    font-size: 1.18rem;
+    line-height: 1.6;
+  }
+
+  .about-community-card p {
+    font-size: 0.91rem;
+    line-height: 1.95;
+  }
+
+  .about-spice-card {
+    padding: 32px 22px;
+  }
+
+  .about-spice-card h3 {
+    font-size: 1.16rem;
+    line-height: 1.65;
+  }
+
+  .about-spice-card blockquote {
+    font-size: 0.9rem;
+    line-height: 1.95;
+  }
+
+  .about-spice-credit,
+  .about-spice-link {
+    font-size: 0.78rem;
+  }
+}
+
+/* ===== ABOUT HUMAN STORY END ===== */

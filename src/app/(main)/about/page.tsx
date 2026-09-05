@@ -32,6 +32,70 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="section bg-surface about-story-section">
+        <div className="container about-story-container">
+
+          <div className="section-header animate-on-scroll">
+            <span className="section-label">
+              {tr.storyLabel}
+            </span>
+
+            <h2 className="section-title">
+              {tr.storyTitle}
+            </h2>
+          </div>
+
+          <div className="about-story-copy animate-on-scroll">
+            <p>{tr.storyP1}</p>
+            <p>{tr.storyP2}</p>
+          </div>
+
+          <div className="about-community-card animate-on-scroll">
+            <h3>{tr.communityTitle}</h3>
+
+            <p>
+              {tr.communityDesc.split('\n').map((line, i) => (
+                <span key={i}>
+                  {line}
+                  {i < tr.communityDesc.split('\n').length - 1 && <br />}
+                </span>
+              ))}
+            </p>
+          </div>
+
+          <div className="about-spice-card animate-on-scroll">
+            <span className="about-spice-label">
+              {tr.spiceLabel}
+            </span>
+
+            <h3>{tr.spiceTitle}</h3>
+
+            <blockquote>
+              {tr.spiceQuote.split('\n').map((line, i) => (
+                <span key={i}>
+                  {line}
+                  {i < tr.spiceQuote.split('\n').length - 1 && <br />}
+                </span>
+              ))}
+            </blockquote>
+
+            <p className="about-spice-credit">
+              {tr.spiceCredit}
+            </p>
+
+            <a
+              href="https://www.instagram.com/chilipepperspainting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="about-spice-link"
+            >
+              Instagram / {tr.spiceLink} →
+            </a>
+          </div>
+
+        </div>
+      </section>
+
       <section className="section bg-surface">
         <div className="container" style={{ maxWidth: '800px' }}>
           <div className="section-header animate-on-scroll">
