@@ -4,7 +4,21 @@ import { useLanguage } from '@/context/LanguageContext'
 import { translations } from '@/lib/translations'
 
 type NewsItem = { id: string; title: string; publishedAt: string; category?: string }
-type EventItem = { id: string; title: string; date: string; location?: string; description?: string }
+type EventImage = {
+  url: string
+  width?: number
+  height?: number
+}
+
+type EventItem = {
+  id: string
+  title: string
+  date: string
+  location?: string
+  description?: string
+  eyecatch?: EventImage
+  images?: EventImage[]
+}
 
 export function HomeClient({ newsList, eventsList }: { newsList: NewsItem[]; eventsList: EventItem[] }) {
   const { lang } = useLanguage()
@@ -120,23 +134,73 @@ export function HomeClient({ newsList, eventsList }: { newsList: NewsItem[]; eve
             <span className="section-label">{tr.eventsLabel}</span>
             <h2 className="section-title">{tr.eventsTitle}</h2>
           </div>
+
           {eventsList.length > 0 ? (
             <div className="events-grid">
-              {eventsList.map(item => (
-                <article key={item.id} className="event-card animate-on-scroll">
-                  <time className="event-date">{new Date(item.date).toLocaleDateString(lang === 'ja' ? 'ja-JP' : lang === 'fr' ? 'fr-FR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
-                  <h3 className="event-title">{item.title}</h3>
-                  {item.location && <p className="event-location">📍 {item.location}</p>}
-                  {item.description && <p className="event-desc">{item.description}</p>}
-                </article>
-              ))}
+              {eventsList.map(item => {
+                const cardImage =
+                  item.eyecatch ?? item.images?.[0]
+
+                return (
+                  <article
+                    key={item.id}
+                    className="event-card animate-on-scroll"
+                  >
+                    <a
+                      href={`/events/${item.id}/`}
+                      className="event-card-clickable"
+                      aria-label={`${item.title}の詳細を見る`}
+                    >
+                      {cardImage ? (
+                        <div className="event-card-thumb event-card-thumb-poster">
+                          <img
+                            src={cardImage.url}
+                            alt={item.title}
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : (
+                        <div className="event-card-image-placeholder">
+                          <span>EVENT</span>
+                        </div>
+                      )}
+
+                      <div className="event-card-content event-card-content-simple">
+                        <time className="event-date">
+                          {new Date(item.date).toLocaleString(
+                            lang === 'ja'
+                              ? 'ja-JP'
+                              : lang === 'fr'
+                                ? 'fr-FR'
+                                : 'en-US',
+                            {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric',
+                              weekday: 'short',
+                              hour: '2-digit',
+                              minute: '2-digit',
+                              timeZone: 'Asia/Tokyo',
+                            }
+                          )}
+                        </time>
+
+                        <h3 className="event-title">
+                          {item.title}
+                        </h3>
+                      </div>
+                    </a>
+                  </article>
+                )
+              })}
             </div>
           ) : (
-            <div className="no-posts"><p>{tr.noEvents}</p></div>
+            <div className="no-posts">
+              <p>{tr.noEvents}</p>
+            </div>
           )}
         </div>
       </section>
-
       {/* ⑥ CTA */}
       <section className="cta-section">
         <div className="container">
