@@ -15,6 +15,7 @@ type EventItem = {
   id: string
   title: string
   date: string
+  schedule?: string
   location?: string
   description?: string
   eyecatch?: EventImage

@@ -2354,3 +2354,45 @@ p:last-child {
 }
 
 /* ===== EVENTS HERO AUTOFIT END ===== */
+
+/* ===== EVENT TITLE + SCHEDULE START ===== */
+
+/* 詳細ページ：複数開催日時 */
+.event-schedule-text {
+  display: block;
+  white-space: pre-line;
+  line-height: 1.9;
+}
+
+/* 一覧：複数日時を改行そのままで表示 */
+.event-date-multiline {
+  white-space: pre-line;
+  line-height: 1.65;
+}
+
+/* スマホ詳細タイトル */
+@media (max-width: 768px) {
+  .event-detail-title-autofit {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    word-break: normal;
+    overflow-wrap: normal;
+    line-height: 1.35;
+  }
+
+  .event-schedule-text {
+    font-size: 0.94rem;
+    line-height: 1.85;
+  }
+
+  .event-date-multiline {
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+}
+
+/* ===== EVENT TITLE + SCHEDULE END ===== */

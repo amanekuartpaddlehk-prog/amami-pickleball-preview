@@ -6,6 +6,8 @@ import {
   getEventDetail,
 } from '@/lib/microcms'
 
+import EventTitleAutoFit from './EventTitleAutoFit'
+
 type PageProps = {
   params: {
     id: string
@@ -100,7 +102,8 @@ export default async function EventDetailPage({
       image => image.url !== heroImage?.url
     )
 
-  const dateText =
+  const scheduleText =
+    event.schedule?.trim() ||
     new Date(event.date).toLocaleString(
       'ja-JP',
       {
@@ -122,9 +125,9 @@ export default async function EventDetailPage({
             EVENT
           </span>
 
-          <h1 className="event-detail-title">
-            {event.title}
-          </h1>
+          <EventTitleAutoFit
+            title={event.title}
+          />
 
           <div className="event-meta-bar">
             <div className="event-meta-bar-item">
@@ -135,7 +138,9 @@ export default async function EventDetailPage({
                 ●
               </span>
 
-              <span>{dateText}</span>
+              <span className="event-schedule-text">
+                {scheduleText}
+              </span>
             </div>
 
             {event.location && (
