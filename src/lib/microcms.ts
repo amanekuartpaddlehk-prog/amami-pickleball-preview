@@ -22,7 +22,7 @@ export type EventItem = {
   date: string
   location?: string
   description?: string
-  status: 'upcoming' | 'completed'
+  status: ('upcoming' | 'completed')[]
   publishedAt: string
 }
 
@@ -43,7 +43,7 @@ export async function getUpcomingEvents(limit = 5): Promise<EventItem[]> {
   try {
     const data = await client.getList<EventItem>({
       endpoint: 'events',
-      queries: { limit, orders: 'date', filters: 'status[equals]upcoming' },
+      queries: { limit, orders: 'date', filters: 'status[contains]upcoming' },
     })
     return data.contents
   } catch {
