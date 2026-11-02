@@ -4,7 +4,7 @@
 //   false : 通常公開に戻る
 // 解除手順: 下の値を false に変えて main に push（GitHub Actions が自動デプロイ）
 // ============================================================
-const MAINTENANCE_MODE = true
+const MAINTENANCE_MODE = false
 
 const STAGING_HOSTNAME = 'amami-pickleball-preview.pages.dev'
 const PUBLIC_PREFIXES = ['/login', '/api/login', '/api/webhook']
